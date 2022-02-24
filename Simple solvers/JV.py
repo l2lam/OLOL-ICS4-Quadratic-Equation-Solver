@@ -7,9 +7,9 @@ print('Enter values for a,b,c to solve for ax^2 + bx + c =0')
 import math
 
 #input values 
-a = int(input('a= '))
-b = int(input('b= '))
-c = int(input('c= '))
+a = int(input('a = '))
+b = int(input('b = '))
+c = int(input('c = '))
 
 #calculate the discriminate (part of the quadratic equation)
 d = (b**2) - (4*a*c) 
@@ -66,10 +66,10 @@ elif z == 0:
    
     #verifying both methods produce the same results
     if root==rootnew:
-        print('The root for the equation using the new method are ' + str(rootnew))
+        print('The root for the equation using the new method is ' + str(rootnew))
         print('Both methods work!')
     else:
-        print('The root for the equation using the new method are ' + str(rootnew))
+        print('The root for the equation using the new method is ' + str(rootnew))
         print('The second method does not work :(')
 else:
     #verifying both methods produce the same results 
