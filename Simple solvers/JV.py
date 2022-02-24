@@ -6,7 +6,7 @@ print('Enter values for a,b,c to solve for ax^2 + bx + c =0')
 
 import math
 
-#input values 
+#input values
 a = int(input('a= '))
 b = int(input('b= '))
 c = int(input('c= '))
@@ -15,7 +15,7 @@ c = int(input('c= '))
 d = (b**2) - (4*a*c) 
 
 #solve for roots using the quadratic equation
-#depending on the value of d, there are either 2,1, or 0 roots in the equation (because d is square rooted and can produce a value>0, 0, or an error if negative #)
+#depending on the value of d, there are either 0,1, or 2 roots in the equation (because d is square rooted and can produce a value>0, 0, or an error if # is negative)
 if d > 0:
     root1 = round(((-b) + math.sqrt(d)) / (2*a),2)
     root2 = round(((-b) - math.sqrt(d)) / (2*a),2)
