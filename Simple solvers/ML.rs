@@ -1,6 +1,7 @@
 // This is a sample RUST program to Calculate the roots of a quadratic equation
 // using 2 different methods: the quadratic formula (q formula) and a new method
 // that we learned in class.
+// Pleas give it a try!
 
 use std::io::{stdin,stdout,Write};
 
