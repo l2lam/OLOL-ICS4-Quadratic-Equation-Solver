@@ -12,13 +12,13 @@ a= float (input ("What is the coefficient of A:"))
 b= float (input ("waht is the coefficient of B:"))
 
 c= float (input ("What is the coefficient of C:"))
-dis = b**2-4*a*c
+disicriminant = b**2-4*a*c
 
 
-if dis < 0:
+if discriminant < 0:
     print ("There is no real solution due to the discriminant (b**2-4*a*c) is smaller than 0")
     
-elif dis > 0:
+elif discriminant > 0:
     print ("There are two solutions since the discriminant (b**2-4*a*c) is larger than 0") 
     print ("Calculating using quadratic formula(-b +/- (b**2-4*a*c)**0.5 / (2*a)")
     xint1=(-b+(dis)**0.5) / (2*a)
@@ -43,10 +43,19 @@ elif dis > 0:
     
     
 else:
-    xint=(-b+(dis)**0.5) / (2*a)
-    print("There is one possible solution")
+    xint=(-b+(discriminant)**0.5) / (2*a)
+    print("There is one possible solution when discriminant is equal to zero (b**2-4ac)")
     print(xint)
-    
+    print ("verifying using different method")
+    b2= (b / a)
+    c2= (c / a)
+    m=(-b2 / 2 )  
+    print("Mid point located using m = ((b/a) / 2)")
+    k=((m**2-c2)**0.5)
+    print ("Distance of root from midpoint is calculated by (m**2-(c/a)**0.5)")
+    p1=m+k
+    rp1=round(p1,2)
+    print (rp1)
 
     
 
