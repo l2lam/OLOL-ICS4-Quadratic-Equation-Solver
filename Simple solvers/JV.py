@@ -79,7 +79,7 @@ else:
     else:
         print('The second method does not work :(')
     
-    
+print('To find out more about the new method to solve quadratic equations, check out this artcile: https://www.sciencealert.com/math-genius-has-come-up-with-a-wildly-simple-new-way-to-solve-quadratic-equations')   
     
 #improvements: use less lines of code and condense it. Try using functions.
 #find an easier way to verify both methods to produce the same results
