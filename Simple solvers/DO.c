@@ -23,7 +23,8 @@ int main() {
         ("root1 = %lf", root1);
         ("root2 = %lf", root2);
     }
-//Print roots from Quadratic equation
+// Print roots from Quadratic equation
+
     else if (discriminant == 0) {
         root1 = root2 = -b / (2 * a);
         printf("root1 = root2 = %lf; \n", root1);
