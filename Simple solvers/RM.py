@@ -21,10 +21,10 @@ root2NewMethod=(averageOfRoots)-(distanceFromRoot2) # This is the second answer 
 if (discriminant==0)or(discriminant>0):
     if (root1QuadraticFormula==root1NewMethod): # To make sure that the quadratic formula and new method give the same result for the first root
         answer1=round(root1QuadraticFormula, 2) # root1QuadraticFormula rounded to two decimal places
-        print(answer1) # The final first answer
+        print(answer1) # The first final answer
 if (discriminant>0):
     if (root2QuadraticFormula==root2NewMethod): # To make sure that the quadratic formula and new method give the same result for the second root
         answer2=round(root2QuadraticFormula, 2) # root2QuadraticFormula rounded to two decimal places
-        print(answer2) # The final second answer
+        print(answer2) # The second final answer
 if (discriminant==0) or (discriminant>0):
     print('Solved using the quadratic formula and new method')
