@@ -2,6 +2,16 @@
 
 #have user enter a,b,c to solve quadratic 
 
+print(Hi there!)
+
+print(Don't be scared of a math problem, cause I'm here to help!)
+
+print(In order to do that......)
+
+print(I need the numbers from you!)
+
+print(lets begin!)
+
 print('Enter values for a,b,c to solve for ax^2 + bx + c =0')
 
 import math
