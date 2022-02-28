@@ -32,15 +32,15 @@ elsif discriminant > 0
     puts "This method will first find the midpoint of the solutions by finding the average of the solutions by dividing B by A, then taking that value and dividing by 2"
     puts "Found! The midpoint is '#{midpoint.round(2)}'"
     distance = Float((midpoint**2-newC)**0.5)
-    puts "This method will now find the distance from the midpoint to each solution by using (m**2-(c / a)**0.5)"
+    puts "This method will now find the distance from the midpoint to each solution by using (midpoint**2-(c / a)**0.5)"
     puts "Found! The distance is '#{distance.round(2)}' to each solution"
-    xint1a = midpoint+distance
-    xint2a = midpoint-distance
+    newMethodx1 = midpoint+distance
+    newMethodx2 = midpoint-distance
     puts "This method now will find the solutions using (midpoint ± distance)"
     puts "Comparing solutions from both methods..."
-    if xint1 == xint1a || xint2a && xint2 == xint2a|| xint1a
+    if xint1 == newMethodx1|| newMethodx1 && xint2 == newMethodx2|| newMethodx1
         puts "The solutions are the same!"
-        puts "The solutions are #{xint1a.round(2)} and #{xint2a.round(2)}"
+        puts "The solutions are #{newMethodx1.round(2)} and #{newMethodx2.round(2)}"
     end
     
 else 
