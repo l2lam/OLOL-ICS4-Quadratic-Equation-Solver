@@ -6,16 +6,16 @@ print('Enter values for a,b,c to solve for ax^2 + bx + c =0')
 
 import math
 
-#input values 
-a = int(input('a = '))
-b = int(input('b = '))
-c = int(input('c = '))
+#input values
+a = int(input('a= '))
+b = int(input('b= '))
+c = int(input('c= '))
 
 #calculate the discriminate (part of the quadratic equation)
 d = (b**2) - (4*a*c) 
 
 #solve for roots using the quadratic equation
-#depending on the value of d, there are either 2,1, or 0 roots in the equation (because d is square rooted and can produce a value>0, 0, or an error if negative #)
+#depending on the value of d, there are either 0,1, or 2 roots in the equation (because d is square rooted and can produce a value>0, 0, or an error if # is negative)
 if d > 0:
     root1 = round(((-b) + math.sqrt(d)) / (2*a),2)
     root2 = round(((-b) - math.sqrt(d)) / (2*a),2)
@@ -66,10 +66,10 @@ elif z == 0:
    
     #verifying both methods produce the same results
     if root==rootnew:
-        print('The root for the equation using the new method is ' + str(rootnew))
+        print('The root for the equation using the new method are ' + str(rootnew))
         print('Both methods work!')
     else:
-        print('The root for the equation using the new method is ' + str(rootnew))
+        print('The root for the equation using the new method are ' + str(rootnew))
         print('The second method does not work :(')
 else:
     #verifying both methods produce the same results 
@@ -79,7 +79,7 @@ else:
     else:
         print('The second method does not work :(')
     
-print('To find out more about the new method to solve quadratic equations, check out this artcile: https://www.sciencealert.com/math-genius-has-come-up-with-a-wildly-simple-new-way-to-solve-quadratic-equations')   
+    
     
 #improvements: use less lines of code and condense it. Try using functions.
 #find an easier way to verify both methods to produce the same results
