@@ -12,9 +12,10 @@ a = float(input("What does A equal to?"))
 b = float(input("What deos B equal to?"))
 
 c = float(input("What does C equal to?"))
+#trying the discriminant solution to find the roots of the equation.
 discriminant = b**2-4*a*c
 
-
+#verify using discriminant < 0 and > 0. 
 if discriminant < 0:
     print("there are no solutions because the discriminant  (b**2-4*a*c)is smaller than 0 ")
     
@@ -41,7 +42,7 @@ elif discriminant > 0:
     tl2=round(l2,2)
     print (tl2, "," ,tl1)
     
-    
+ #now using the second method to find the possible roots of the equation.  
 else:
     xint=(-b+(discriminant)**0.5) / (2*a)
     print("There is one possible solution")
