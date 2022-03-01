@@ -17,19 +17,14 @@ int main() {
     double root1, root2;
 
 //Using the Quadratic equation way
-    if (discriminant > 0) {
         root1 = (-b + sqrt(discriminant)) / (2 * a);
         root2 = (-b - sqrt(discriminant)) / (2 * a);
-        ("root1 = %lf", root1);
-        ("root2 = %lf", root2);
-    }
+        
 //Print roots from Quadratic equation
-    else if (discriminant == 0) {
-        root1 = root2 = -b / (2 * a);
-        printf("root1 = root2 = %lf; \n", root1);
-    }
+
         printf("The Quadratic equation will take the inputs a, b, c and put them into the equation (b * b - 4 * a * c) to give us our discriminant.\n");
         printf("It will then all go into the equation (-b +/- sqrt(discriminant)) / (2 * a)) to give us our roots.\n\n");
+        printf("nan = Not A Number, which means their are no roots.\n\n");
         printf("Using the quadratic formula the discriminant and roots are: \n");
 
         printf("The discriminant is: %lf \n", discriminant);
