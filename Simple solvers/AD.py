@@ -2,17 +2,17 @@
 
 # Quick introduction text
 
-print(Hi there!)
+print("Hi there!")
 
-print(Don't be scared of a math problem)
+print("Don't be scared of a math problem")
 
-print(Because I'm here to help!)
+print("Because I'm here to help!")
 
-print(In order to do that......)
+print("In order to do that......")
 
-print(I need the numbers from you!)
+print("I need the numbers from you!")
 
-print(lets begin!)
+print("lets begin!")
 
 print('Enter values for a,b,c to solve for ax^2 + bx + c =0')
 
@@ -67,12 +67,12 @@ if z > 0:
     if (root1==root1new and root2==root2new) or (root1==root2new and root2==root1new): #sometimes the roots are the same but in a different order
         print('The roots for the equation using the new method are '+ str(root1new) + ' and ' + str(root2new))
         print('Both methods work!')
-        print(Great teamwork!)
+        print("Great teamwork!")
 
     else:
         print('The roots for the equation using the new method are '+ str(root1new) + ' and ' + str(root2new))
         print('The second method does not work :(')
-        print(Lets keep trying)
+        print("Lets keep trying")
 
 elif z == 0:
     rootnew = round(m,2)
@@ -82,24 +82,24 @@ elif z == 0:
     if root==rootnew:
         print('The root for the equation using the new method are ' + str(rootnew))
         print('Both methods work!')
-        print(Amazing!)
+        print("Amazing!")
     else:
         print('The root for the equation using the new method are ' + str(rootnew))
         print('The second method does not work :(')
-        print(Don't worry, keep trying!)
+        print("Don't worry, keep trying!")
 else:
     # verifying both methods produce the same results 
     if d<0 and z<0:
         print('There are no roots in the equation because the distance from the roots is negative')
         print('Both methods work!')
-        print(Incredible!)
+        print("Incredible!")
     else:
         print('The second method does not work :(')
-        print(So close!)
+        print("So close!")
 
-print(We did it!)
-+
-print(We make a good team togeather!)
+print("We did it!")
+
+print("We make a good team togeather!")
 
 # improvements: use less lines of code and condense it. Try using functions.
 # find an easier way to verify both methods to produce the same results
