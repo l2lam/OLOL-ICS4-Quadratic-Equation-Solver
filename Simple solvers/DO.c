@@ -21,7 +21,6 @@ int main() {
         root2 = (-b - sqrt(discriminant)) / (2 * a);
         
 //Print roots from Quadratic equation
-
         printf("The Quadratic equation will take the inputs a, b, c and put them into the equation (b * b - 4 * a * c) to give us our discriminant.\n");
         printf("It will then all go into the equation (-b +/- sqrt(discriminant)) / (2 * a)) to give us our roots.\n\n");
         printf("nan = Not A Number, which means their are no roots.\n\n");
