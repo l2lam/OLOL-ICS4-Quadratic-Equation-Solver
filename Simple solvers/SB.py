@@ -12,17 +12,18 @@ a = float(input("What does A equal to?"))
 b = float(input("What deos B equal to?"))
 
 c = float(input("What does C equal to?"))
-dis = b**2-4*a*c
+#trying the discriminant solution to find the roots of the equation.
+discriminant = b**2-4*a*c
 
-
-if dis < 0:
+#verify using discriminant < 0 and > 0. 
+if discriminant < 0:
     print("there are no solutions because the discriminant  (b**2-4*a*c)is smaller than 0 ")
     
-elif dis > 0:
+elif discriminant > 0:
     print ("There are two possible solutions because the discriminant (b**2-4*a*c)is bigger than 0")
     print ("working out using quadratic formation(-b +/- (b**2-4*a*c)**0.5 / (2*a)")
-    xint1=(-b+(dis)**0.5) / (2*a)
-    xint2=(-b-(dis)**0.5) / (2*a)
+    xint1=(-b+(discriminant)**0.5) / (2*a)
+    xint2=(-b-(discriminant)**0.5) / (2*a)
     print  ("sorted out the roots and accumulated to 2 decimal places")
     roundx1=round(xint1,2)
     roundx2=round(xint2,2)
@@ -41,10 +42,19 @@ elif dis > 0:
     tl2=round(l2,2)
     print (tl2, "," ,tl1)
     
-    
+ #now using the second method to find the possible roots of the equation.  
 else:
-    xint=(-b+(dis)**0.5) / (2*a)
+    xint=(-b+(discriminant)**0.5) / (2*a)
     print("There is one possible solution")
     print (xint)
-
+ print("verifying by using a different method")
+    b1= (b / a)
+    c1= (c / a)
+    m=(-b1 /2)
+    print("centre is placed by using m = ((b/a) / 2)")
+    z=((m**2-c1)**0.5)
+    print ("interspace of root from centre is woked out by (m**2-(c/a)**0.5)")
+    l1=m+z
+    tl1=round(l1,2)
+    print (tl1) 
 
