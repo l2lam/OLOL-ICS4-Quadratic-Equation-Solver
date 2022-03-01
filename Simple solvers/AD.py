@@ -72,6 +72,7 @@ if z > 0:
     else:
         print('The roots for the equation using the new method are '+ str(root1new) + ' and ' + str(root2new))
         print('The second method does not work :(')
+        print(Lets keep trying)
 
 elif z == 0:
     rootnew = round(m,2)
@@ -81,19 +82,23 @@ elif z == 0:
     if root==rootnew:
         print('The root for the equation using the new method are ' + str(rootnew))
         print('Both methods work!')
+        print(Amazing!)
     else:
         print('The root for the equation using the new method are ' + str(rootnew))
         print('The second method does not work :(')
+        print(Don't worry, keep trying!)
 else:
     # verifying both methods produce the same results 
     if d<0 and z<0:
         print('There are no roots in the equation because the distance from the roots is negative')
         print('Both methods work!')
+        print(Incredible!)
     else:
         print('The second method does not work :(')
+        print(So close!)
 
 print(We did it!)
-
++
 print(We make a good team togeather!)
 
 # improvements: use less lines of code and condense it. Try using functions.
