@@ -62,9 +62,9 @@ if z > 0:
         
 elif z == 0:
     rootnew = round(m,2)
-    print('The distance from the roots is 0 because there is only one root.')
+    print('The distance from the roots is 0.')
     
-    print('The root for the equation using the new method is ' + str(rootnew))
+    print('Therefore, the root for the equation using the new method is ' + str(rootnew))
 
     #verifying both methods produce the same results
     if root==rootnew:
