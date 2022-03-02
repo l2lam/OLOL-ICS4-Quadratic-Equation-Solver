@@ -1,5 +1,11 @@
 #I used Python to solve the quadratic using two methods: the quadratic equation and the new method
 
+def handleEquationAgreementResult(resultIsInAgreement):
+    if resultIsInAgreement:
+        print('Both methods work!')
+    else:
+        print('The second method does not work :(')
+
 #have user enter a,b,c to solve quadratic 
 
 print('Enter values for a,b,c to solve for ax^2 + bx + c =0')
@@ -54,11 +60,7 @@ if z > 0:
     print('The roots for the equation using the new method are '+ str(root1new) + ' and ' + str(root2new))
    
     #verifying both methods produce the same results 
-    if (root1==root1new and root2==root2new) or (root1==root2new and root2==root1new): #sometimes the roots are the same but in a different order
-        print('Both methods work!')
-
-    else:
-        print('The second method does not work :(')
+    handleEquationAgreementResult((root1==root1new and root2==root2new) or (root1==root2new and root2==root1new)) #sometimes the roots are the same but in a different order
         
 elif z == 0:
     rootnew = round(m,2)
@@ -67,17 +69,12 @@ elif z == 0:
     print('Therefore, the root for the equation using the new method is ' + str(rootnew))
 
     #verifying both methods produce the same results
-    if root==rootnew:
-        print('Both methods work!')
-    else:
-        print('The second method does not work :(')
+    handleEquationAgreementResult(root==rootnew)
+
 else:
     print('There are no roots in the equation because the distance from the roots is negative')
     #verifying both methods produce the same results 
-    if d<0 and z<0:
-        print('Both methods work!')
-    else:
-        print('The second method does not work :(')
+    handleEquationAgreementResult(d<0 and z<0)
     
 print('To find out more about the new method to solve quadratic equations, check out this artcile: https://www.sciencealert.com/math-genius-has-come-up-with-a-wildly-simple-new-way-to-solve-quadratic-equations')   
     
