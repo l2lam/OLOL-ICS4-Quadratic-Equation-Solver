@@ -1,4 +1,5 @@
-print('Insert values for a, b, c')
+print('Welcome to the quadractic equation roots calculator!')
+print('Please enter the values for a, b, and c')
 # Quadratic formula
 # 'float' allows any number, even decimal numbers, to be inserted
 # 'int' isn't used here because 'int' only allows non-decimal numbers to be inserted
@@ -7,8 +8,7 @@ b=float(input())
 c=float(input())
 discriminant=(b**2)-(4*a*c)
 if (discriminant<0):
-    print('No solution because discriminant is less than zero') 
-    # There is no solution if d is less than 0
+    print('There is no solution because the discriminant is less than zero') # There is no solution if d is less than 0
 if (discriminant==0):
     print('1 solution') 
     # There is one solution if d is equal to 0
@@ -40,4 +40,4 @@ if (discriminant>0):
         # root2QuadraticFormula rounded to two decimal places
         print(answer2) # The second final answer
 if (discriminant==0) or (discriminant>0):
-    print('Solved using the quadratic formula and new method')
+    print('Solved using the quadratic formula and new method, in the quadractic equations roots calculator')
