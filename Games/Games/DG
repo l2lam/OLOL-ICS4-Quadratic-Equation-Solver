@@ -1,0 +1,28 @@
+<div id="quiz"></div>
+<button id="submit">Get Results</button>
+<div id="results"></div>
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+	function showQuestions(questions, quizContainer){
+		// code will go here
+	}
+
+	function showResults(questions, quizContainer, resultsContainer){
+		// code will go here
+	}
+
+	// show the questions
+	showQuestions(questions, quizContainer);
+
+	// when user clicks submit, show results
+	submitButton.onclick = function(){
+		showResults(questions, quizContainer, resultsContainer);
+	}
+}
+var = var + 7 
+score = score +2
+
+var myQuestions = [
+	{
+
+		question: "A square has a side length of X what is the perimeter"
