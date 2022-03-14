@@ -61,14 +61,17 @@ confirmationText.y = 400;
 app.stage.addChild(confirmationText);
 
 // A place to store the correct answer for the current question
-correctAnswer = null;
+let correctAnswer = null;
+const maxValue = 10;
+
 
 // Generates a new question and displays it
 function showQuestion() {
     // a + b = c
-    correctAnswer = Math.floor(Math.random() * 10);
-    given = Math.floor(Math.random() * 10);
+    correctAnswer = Math.floor(Math.random() * maxValue);
+    given = Math.floor(Math.random() * maxValue);
 
+    // To give some variation to problem, we can ask the user to solve for either a, b, or c
     variant = Math.random();
     if (variant < 0.66)
     {
