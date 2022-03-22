@@ -1,0 +1,459 @@
+import random
+
+randomNumber = random.randint(1, 15)
+##print(int(randomNumber))
+#""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+var = (int(randomNumber))
+var1 = (int(randomNumber + 1))
+
+var2 = (int(randomNumber + 3))
+var3 = (int(randomNumber + 2))
+
+var4 = (int(randomNumber + 26))
+var5 = (int(randomNumber + 22))
+
+var6 = (int(randomNumber + 3))
+var7 = (int(randomNumber + 6))
+
+var8 = (int(randomNumber * 3))
+var9 = (int(randomNumber + 37))
+
+var10 = (int(randomNumber + 112))
+var11 = (int(randomNumber + 86))
+
+var12 = (int(randomNumber + 4))
+
+var13 = (int(randomNumber * 2))
+
+var14 = (int(randomNumber + 5))
+
+var15 = (int(randomNumber + 18))
+
+var16 = (int(randomNumber + 3))
+
+var17 = (int(randomNumber + 16))
+var18 = (int(randomNumber + 14))
+
+var19 = (int(randomNumber + 17))
+var20 = (int(randomNumber + 23))
+
+var21 = (int(randomNumber + 44))
+var22 = (int(randomNumber + 44))
+
+#""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+x = 0
+score = x
+
+
+#---------------------------------------------------------------------------------------
+#this is for our calculator
+# This function adds two numbers
+def add(x, y):
+    return x + y
+
+
+# This function subtracts two numbers
+def subtract(x, y):
+    return x - y
+
+
+# This function multiplies two numbers
+def multiply(x, y):
+    return x * y
+
+
+# This function divides two numbers
+def divide(x, y):
+    return x / y
+
+
+# Import math Library
+import math
+
+import pi
+# Print the value of pi
+#print (math.pi)
+
+(pi) = round((math.pi), 3)
+
+print('Welcome to the coolest math game ever!!!')
+print("")
+print('You can enter "hint" if your stuck but it will cost you 3 points!')
+print("")
+print('To stop the game, enter "stop"')
+print("")  #these are to make space between each question
+print("")
+##############################################################################
+#stop = break
+
+#Q1 Perimeter of a square
+
+print(f'One side of a square is {var1} m what is the perimeter of the square?')
+print('please answer using a, b, c, or d.')
+
+num1 = {var1}
+num2 = 4
+
+num1 = float(var1)
+num2 = float(4)
+answer1 = (num1 * num2)
+
+answer_1 = input(
+    f"a){var1 + 5.0}\nb){var1 - 2.0}\nc){answer1}\nd){var1+20.0}\n:")
+
+#####print("The formula for the perimeter of a square is Side Length * 4")
+
+if answer_1.lower() == "c":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+else:
+    print(f"Incorrect, {var1} * 4 is {answer1}")
+
+    ###################################################################################
+
+#Q2 Area of Square
+print('')
+print(f'A square has a side length of {var2} what is the area of the square')
+print(f'please answer using a, b, c, or d.')
+
+num3 = {var2}
+
+num3 = float(var2)
+answer2 = (num3 * num3)
+
+answer_1 = input(
+    f"a){var1 + 6.0}\nb){var1 + 8.0}\nc){var1 * 3.0}\nd){answer2}\n:")
+
+##print("The formula for the area of a square is Length * Width")
+
+if answer_1.lower() == "d":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, {var2} * {var2} is {answer2}")
+
+    ####################################################################################
+
+#Q3 area of a sqaure
+print('')
+print(f'A square has a side length of {var4} what is the area of the square')
+print(f'please answer using a, b, c, or d.')
+
+num4 = {var4}
+
+num5 = float(var4)
+
+answer3 = (num5 * num5)
+
+answer_1 = input(
+    f"a){answer3}\nb){var1 + 142.0}\nc){var1 * 10.0}\nd){var1 * 149.0}\n:")
+
+##print("The formula for the area of a square is Length * Width")
+
+if answer_1.lower() == "a":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, {var4} * {var4} is {answer3}")
+
+    ####################################################################################
+
+#Q4 Perimeter of a rectangle
+print('')
+print(
+    f'A rectangle has a width of {var6} and a height of {var7} find the perimeter'
+)
+print(f'please answer using a, b, c, or d.')
+
+num6 = {var6}
+num7 = {var7}
+
+num6 = float(var6)
+num7 = float(var7)
+answer4 = (num6 + num7) * 2
+
+answer_1 = input(
+    f"a){var1 + 6.0}\nb){var1 + 4.0}\nc){answer4}\nd){var1 + 7.0 - 3.0}\n:")
+
+###print(The formula for the perimeter of a rectangle is 2(Length * Width)
+
+if answer_1.lower() == "c":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, ({var6} + {var7})*2 is {answer4}")
+    ####################################################################################
+
+#Q5 perimeter of a rectangle
+print('')
+print(
+    f'A rectangle has a width of {var8} and a height of {var9} find the perimeter'
+)
+print(f'please answer using a, b, c, or d.')
+
+num8 = {var8}
+num9 = {var9}
+
+num8 = float(var8)
+num9 = float(var9)
+answer5 = (num8 + num9) * 2
+
+answer_1 = input(
+    f"a){var1 + 46.0}\nb){answer5}\nc){var1 *7.0}\nd){var1 + 7.0 * 8.0}\n:")
+
+###print(The formula for the perimeter of a rectangle is 2(Length * Width)
+
+if answer_1.lower() == "b":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, ({var8} + {var9})*2 is {answer5}")
+
+    ####################################################################################
+
+#Q6 Perimeter of a rectangle
+print('')
+print(
+    f'A rectangle has a width of {var8} and a height of {var9} find the perimeter'
+)
+print(f'please answer using a, b, c, or d.')
+
+num10 = {var10}
+num11 = {var11}
+
+num10 = float(var10)
+num11 = float(var11)
+answer6 = (num10 + num11) * 2
+
+answer_1 = input(
+    f"a){answer6}\nb){var1 * 18.0}\nc){var1 + 220.0}\nd){var1 + 70.0 * 8.0}\n:"
+)
+
+###print(The formula for the perimeter of a rectangle is 2(Length * Width)
+
+if answer_1.lower() == "a":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, ({var10} + {var11})*2 is {answer6}")
+    ####################################################################################
+
+    #Q7 circumference of a circle
+print('')
+print(f'A circle has a radius of {var12} find the circumference')
+print(f'please answer using a, b, c, or d.')
+print('note that this calculator uses 3 deciemal places for PI (3.142)')
+
+num12 = {var12}
+
+num12 = float(var12)
+answer7 = (2 * (pi) * num12)
+
+answer_1 = input(
+    f"a){var1+ 40.391}\nb){var1 + 22.156}\nc){var1 + 136.922}\nd){answer7}\n:")
+
+###print(The formula for the circumference of a circle is 2*(PI)*R
+
+if answer_1.lower() == "d":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, 2 * {pi} * {var12} is {answer7}")
+
+    ####################################################################################
+
+    #Q8 circumference of a circle
+print('')
+print(f'A circle has a radius of {var13} find the circumference')
+print(f'please answer using a, b, c, or d.')
+print('note that this calculator uses 3 decimal places for PI (3.142)')
+
+num13 = {var13}
+
+num13 = float(var13)
+answer8 = (2 * (pi) * num13)
+
+answer_1 = input(
+    f"a){var1+ 60.391}\nb){answer8}\nc){var1 + 166.922}\nd){var1 * 8}\n:")
+
+###print(The formula for the circumference of a circle is 2*(PI)*R
+
+if answer_1.lower() == "b":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, 2 * {pi} * {var13} is {answer8}")
+
+print('')
+###################################################################################
+
+#Q9 area of a circle
+print('')
+print(f'A circle has a radius of {var14} find the area')
+print(f'please answer using a, b, c, or d.')
+print('note that this calculator uses 3 decimal places for PI (3.142)')
+
+num14 = {var14}
+
+num14 = float(var14)
+answer9 = ((pi) * num14 * num14)
+
+answer_1 = input(
+    f"a){var1+ 11.381}\nb){answer8}\nc){var1 + 66.932}\nd){var1 + 8.011  }\n:")
+
+###print(The formula for the area of a circle is (PI)R*R
+
+if answer_1.lower() == "b":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, ({(pi)}*{var14}*{var14} is {answer9})")
+    ###############################################################################
+
+    #Q10 area of a circle
+print('')
+print(f'A circle has a radius of {var15} find the area')
+print(f'please answer using a, b, c, or d.')
+print('note that this calculator uses 3 decimal places for PI (3.142)')
+
+num15 = {var15}
+
+num15 = float(var15)
+answer10 = ((pi) * num15 * num15)
+
+answer_1 = input(
+    f"a){var1+ 11.381}\nb){answer8}\nc){var1 + 66.932}\nd){var1 + 8.0  }\n:")
+
+###print(The formula for the area of a circle is (PI)R*R
+
+if answer_1.lower() == "b":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, ({(pi)}*{var14}*{var14} is {answer10})")
+
+#####################################################################
+
+#Q11 perimeter of a triangle
+print('')
+print(
+    f'An equilateral triangle has a side length of {var16} find the perimeter')
+print(f'please answer using a, b, c, or d.')
+
+num16 = {var16}
+
+num16 = float(var16)
+answer11 = num16 * 3
+
+answer_1 = input(
+    f"a){var1+ 12.0}\nb){var1+ 7.0}\nc){answer11}\nd){var1 + 30.0  }\n:")
+
+###print(The formula for the area of a circle is (PI)R*R
+
+if answer_1.lower() == "c":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, ({var16 * 3 is answer11})")
+########################################################
+
+#Q12 area of a triangle
+print('')
+print(
+    f'A triangle has a base of {var17} and a height of {var18} find the area')
+print(f'please answer using a, b, c, or d.')
+
+num17 = {var17}
+num18 = {var18}
+num17 = float(var17)
+num18 = float(var18)
+num19 = (num17 * num18)
+answer12 = num19 / 2
+
+answer_1 = input(
+    f"a){answer12}\nb){var1+ 37.0}\nc){var1 + 11.0}\nd){var1 + 290.0}\n:")
+
+###print(The formula for the area of a circle is (PI)R*R
+
+if answer_1.lower() == "a":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, ({var17} * {var18})/2 is {answer12}")
+###################################################
+
+#Q13 area of a triangle
+print('')
+print(
+    f'A triangle has a base of {var19} and a height of {var20} find the area')
+print(f'please answer using a, b, c, or d.')
+
+num20 = {var19}
+num21 = {var20}
+num20 = float(var19)
+num21 = float(var20)
+num22 = (num19 * num20)
+answer13 = num22 / 2
+
+answer_1 = input(
+    f"a){answer12}\nb){var1+ 47.0}\nc){var1 + 110.0}\nd){var1 + 312.0}\n:")
+
+###print(The formula for the area of a circle is (PI)R*R
+
+if answer_1.lower() == "a":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, ({var19} * {var20})/2 is {answer13}")
+###########################################################################
+
+print('')
+print(
+    f'A triangle has a base of {var21} and a height of {var22} find the area')
+print(f'please answer using a, b, c, or d.')
+
+num23 = {var21}
+num24 = {var22}
+num23 = float(var21)
+num24 = float(var22)
+num25 = (num23 * num24)
+answer14 = num25 / 2
+
+answer_1 = input(
+    f"a){var1 * var7 + 33}\nb){var1+ 147.0}\nc){answer14}\nd){var1 * 6 *7 * 8}\n:"
+)
+
+###print(The formula for the area of a circle is (PI)R*R
+
+if answer_1.lower() == "c":
+    print("Correct")
+    score = score + 1
+    print(f"You have {score} point(s)")
+
+else:
+    print(f"Incorrect, ({var21} * {var22})/2 is {answer13}")
