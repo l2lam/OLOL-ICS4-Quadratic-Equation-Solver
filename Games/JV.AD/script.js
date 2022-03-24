@@ -1,3 +1,23 @@
+//making timer 
+let timeLeft = 60;
+let timerInterval;
+function startGame()
+  {
+    document.getElementById("startBtn").disabled = true;
+    
+    let timeDisplay=document.getElementById("timeDisplay");
+    timeDisplay.hidden = false;
+    timerInterval = setInterval(function(){
+      timeLeft -= 1;
+      
+      timeDisplay.innerHTML = "Time Left: " + timeLeft;
+      if (timeLeft == 0)
+      {
+        clearInterval(timerInterval);
+      }
+    },1000)
+  }
+
 //transparent background canvas
 const app = new PIXI.Application({ transparent: true });
 document.body.appendChild(app.view);
