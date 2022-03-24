@@ -5,6 +5,8 @@ function startGame()
   {
     document.getElementById("startBtn").disabled = true;
     
+    nextQuestion();
+
     let timeDisplay=document.getElementById("timeDisplay");
     timeDisplay.hidden = false;
     timerInterval = setInterval(function(){
@@ -17,6 +19,18 @@ function startGame()
       }
     },1000)
   }
+
+
+//making randomizer with sin,cos, and tan to put in questions 
+var trigratios = ["sin","cos","tan"];
+var trigratio =  trigratios[Math.floor(Math.random()*trigratios.length)];
+
+//creating function to be able to change trig ratios in question 
+function nextQuestion()
+{
+question = document.getElementById("question");
+question.innerHTML = "What is the trig ratio of " + trigratio + "?";
+}
 
 //transparent background canvas
 const app = new PIXI.Application({ transparent: true });
@@ -56,7 +70,4 @@ adj.x = 5;
 adj.y = 150;
 app.stage.addChild(adj);
 
-function nextQuestion()
-  {
-    
-  }
+
