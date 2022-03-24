@@ -8,21 +8,22 @@
   </head>
   <body>
     <h1>Big Trig</h1>
-    <button onclick=startGame()>START</button>
+    <!--Start button and timer display-->
+    <button id = "startBtn" onclick="startGame()">START</button>
     <br>
     <br>
-    
-    <div>Time Left: 60</div>
+    <div id="timeDisplay" hidden>Time Left: 60</div>
     <br>
 
-    <div id=question>What is the trig ratio?</div>
+    <!--question and multiple choice buttons--> 
+    <div id = "question" >What is the trig ratio?</div>
     <br>
-    <button id =btn1> 0 </button>
-    <button id =btn2> 0 </button>
-    <button id =btn3> 0 </button>
-    <button id =btn4> 0 </button>
+    <button id = "btn1"> 0 </button>
+    <button id = "btn2"> 0 </button>
+    <button id = "btn3"> 0 </button>
     <br>
+
     <script src="https://pixijs.download/release/pixi.js"></script>
-     <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
