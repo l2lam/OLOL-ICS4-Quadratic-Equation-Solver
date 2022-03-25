@@ -12,7 +12,7 @@ function startGame()
     timerInterval = setInterval(function(){
       timeLeft -= 1;
       
-      timeDisplay.innerHTML = "Time Left: " + timeLeft;
+      timeDisplay.innerHTML = `Time Left: ${timeLeft}`;
       if (timeLeft == 0)
       {
         clearInterval(timerInterval);
@@ -22,14 +22,14 @@ function startGame()
 
 
 //making randomizer with sin,cos, and tan to put in questions 
-var trigratios = ["sin","cos","tan"];
-var trigratio =  trigratios[Math.floor(Math.random()*trigratios.length)];
+const trigratios = ["sin","cos","tan"];
+const trigratio =  trigratios[Math.floor(Math.random()*trigratios.length)];
 
 //creating function to be able to change trig ratios in question 
 function nextQuestion()
 {
 question = document.getElementById("question");
-question.innerHTML = "What is the trig ratio of " + trigratio + "?";
+question.innerHTML = `What is the trig ratio of ${trigratio}?`;
 }
 
 //transparent background canvas
@@ -65,9 +65,14 @@ obj.x = 100;
 obj.y = 260;
 app.stage.addChild(obj);
 
-const adj = new PIXI.Text(s3)
+const adj = new PIXI.Text(s3);
 adj.x = 5;
 adj.y = 150;
 app.stage.addChild(adj);
+
+const theta = new PIXI.Text('θ');
+theta.x = 36;
+theta.y = 72;
+app.stage.addChild(theta);
 
 
