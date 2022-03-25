@@ -18,10 +18,10 @@ def mathfun():
 
 #score /10 and when to stop
   score1 = 0
-  finished0 = 0
+  finished = 0
 
   #while function goes for 10 questions
-  while finished0 < 10: 
+  while finished < 10: 
 
     #Choosing numbers to use and importing to equation
     questionnum = random.choice(random_num)
@@ -49,7 +49,7 @@ def mathfun():
       score1 += 1
       print("Correct")
       print("Score:",  score1,  "/ 10")
-      finished0 += 1
+      finished += 1
       print("Total Time: "+str(totaltime))
 
     #easter egg
@@ -62,8 +62,8 @@ def mathfun():
     else:
       print("Incorrect buddy")
       print("Score:",  score1, "/ 10")
-      finished0 += 1
+      finished += 1
       print("Total Time: "+str(totaltime))
     
   return 
-print(mathfun())
+mathfun()
