@@ -1,60 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.button {
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.button1 {
-  background-color: white;
-  color: black;
-  border: 2px solid #00C9C9;
-}
-
-.button1:hover {
-  background-color: #00C9C9;
-  color: white;
-}
-
-.button2 {
-  background-color: white;
-  color: black;
-  border: 2px solid #4CAF50;
-}
-
-.button2:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-.button3 {
-  background-color: white;
-  color: black;
-  border: 2px solid #AA00C1;
-}
-
-.button3:hover {
-  background-color: #AA00C1;
-  color: white;
-}
-.button4 {
-  background-color: white;
-  color: black;
-  border: 2px solid #8C0202;
-}
-.button4:hover {
-  background-color: #8C0202;
-  color: white;
-  </style>
     <script src="https://pixijs.download/release/pixi.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -65,11 +11,11 @@
     <script src="script.js"></script>
     <p id="demo">(Click Next Question to Start!)</p>
     <fieldset>
-        <label>Answer</label> <input id="answer"/>
+        <label>Answer:</label> <input id="answer"/>
     </fieldset>
     <button class="button button1" type="button" onclick="nextQuestion();">Next Question</button>
      <button class="button button2" onclick="checkAnswer(document.getElementById('answer').value)">Submit answer</button>
-    <button class="button button3" type="button" onclick="quitGame()";> Hint
+    <button class="button button3" type="button" onclick="hintPlayer()";> Hint
     <button class="button button4" type="button" onclick="quitGame();">Quit
   </body>
 </html>

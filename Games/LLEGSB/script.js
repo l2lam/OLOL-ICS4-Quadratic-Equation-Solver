@@ -13,24 +13,31 @@ const style = new PIXI.TextStyle({
   fontFamily: "Times New Roman",
   fontSize: 38,
   wordWrap: true,
-  wordWrapWidth: 440,
+  wordWrapWidth: 500,
 });
+// style for rule text
 const style1 = new PIXI.TextStyle({
   align: "center",
   dropShadow: true,
   dropShadowBlur: 10,
   dropShadowDistance: 7,
     fill: [
-    "#4100f5",
-    "#c70000"
+    "red",
+    "#4f1144"
   ],
   fontFamily: "Times New Roman",
-  fontSize: 30,
+  fontSize: 38,
   wordWrap: true,
-  wordWrapWidth: 440,
+  wordWrapWidth: 600,
 });
 
 let correctAnswer = null;
+
+// text for rules
+const rulesText = new PIXI.Text('',style);
+rulesText.x = 275;
+rulesText.y = 50;
+app.stage.addChild(rulesText);
 
 //question text
 const questionText = new PIXI.Text('', style);
@@ -43,21 +50,36 @@ confirmationText.x = 285;
 confirmationText.y = 300;
 app.stage.addChild(confirmationText);
 
+// text when player quits
 const quitText = new PIXI.Text('', style);
 quitText.x = 215;
 quitText.y = 250;
 app.stage.addChild(quitText);
 
+// hint player text
+const hintText = new PIXI.Text('', style);
+hintText.x = 200;
+hintText.y = 250;
+app.stage.addChild(hintText);
+
+const pointsText = new PIXI.Text('', style)
+pointsText.x = 215;
+pointsText.y = 300;
+app.stage.addChild(pointsText);
+// to store player points
 var playerPoints = 0;
+var playerPointsIfCorrect = 500;
 
-
+// player lives
+var playerLives = null;
 
 // first question function
 // basic algebra question
 function question1(){
   //Change the Welcome text to the question #
   document.getElementById("demo").innerHTML = 'Question 1';
-  
+  hintText.text = '';
+  playerLives = 3;
   // Assigns the variables "a" and "b" to random values
   var a = Math.floor((Math.random() * 50) + 1);
   var b = Math.floor((Math.random() * 1000) + 200);
@@ -74,6 +96,7 @@ function question2(){
   document.getElementById("demo").innerHTML = 'Question 2';
   confirmationText.text = '';
   quitText.text = '';
+  hintText.text = '';
   var a = Math.floor(Math.random() * (22 - 12 + 1)) + 12;
   var b = 2;
   var c = Math.pow(a, b)
@@ -86,6 +109,7 @@ function question3(){
   document.getElementById('demo').innerHTML = "Question 3";
   confirmationText.text = '';
   quitText.text = '';
+  hintText.text = ''
   var a = Math.floor(Math.random() * (70 - 20 + 1)) + 20;
   var b = Math.round(a*0.15);
   questionText.text = `A waiter received a 15% tip for a restaurant bill of $${a}. Estimate the tip the waiter received to the nearest dollar($).`
@@ -98,6 +122,7 @@ function question4(){
   document.getElementById('demo').innerHTML = "Question 4";
   confirmationText.text = '';
   quitText.text = '';
+  hintText.text = ''
   var a = Math.floor(Math.random() * (-20 - 20 + 1)) + 20;
   var b = Math.floor(Math.random() * (10 - 2 + 1)) + 2;
   var c = Math.floor(Math.random() * (7 - 2 + 1)) + 2;
@@ -113,6 +138,7 @@ function question5(){
   document.getElementById('demo').innerHTML = "Question 5";
   confirmationText.text = '';
   quitText.text = '';
+  hintText.text = ''
   var y1 = Math.floor(Math.random() * (200 - 1 + 1)) + 1;
   var y2 = Math.floor(Math.random() * (200 - 1 + 1)) + 1;
   var x1 = Math.floor(Math.random() * (200 - 1 + 1)) + 1;
@@ -121,30 +147,70 @@ function question5(){
   var slopeEquation = ((y2-y1)/(x2-x1));
   slopeRounded = slopeEquation.toFixed(2);
   correctAnswer = `${slopeRounded}`;
-  console.log(slopeRounded);
 }
 
-// a function to check the answer for question 
-function checkAnswer(answer){
-    if (answer == correctAnswer)
-      confirmationText.text = 'Correct!';
-    
-    else 
-      confirmationText.text = 'Wrong :(';
-}
- 
-function quitGame(){
-  quitText.text = "Thanks for playing!";
+function question6(){
+  document.getElementById('demo').innerHTML = "Question 6";
   confirmationText.text = '';
-  questionText.text = '';
+  quitText.text = '';
+  hintText.text = ''
+  var x1 = Math.floor(Math.random() * (300 - 100 + 1)) + 100;
+  var y1 = Math.floor(Math.random() * (300 - 100 + 1)) + 100;
+  var x2 = Math.floor(Math.random() * (300 - 100 + 1)) + 100;
+  var y2 = Math.floor(Math.random() * (300 - 100 + 1)) + 100;
+  questionText.text = `What is the length of a line segment with the endpoints (${x1}, ${y1}) and (${x2}, ${y2})`  
+  var x = (x2-x1); 
+  var y = (y2-y2);
+  var xSquare = (x**2);
+  var ySquare = (y**2);
+  var add = (xSquare+ySquare);
+  var squareRoot = (add**0.5);
+  ansRounded = squareRoot.toFixed(2);
+  correctAnswer = ansRounded;
+  console.log(correctAnswer)
+}
+//
+// a function to check the answer for question 
+
+function checkAnswer(answer){
+  hintText.text = '';
+    if (answer == correctAnswer)
+      (confirmationText.text = 'Correct!')
+      (playerPoints += 500);
+    else 
+      (confirmationText.text = 'Wrong :(');
+      (playerLives -= 1);
+  
 }
 
 // function to change question on button push
-let currentQuestionIndex = 0;
+var currentQuestionIndex = 0;
 // list of functions
-const questionList = [question1, question2, question3, question4, question5]; 
+const questionList = [question1, question2, question3, question4, question5, question6]; 
 
 function nextQuestion() {
    questionList[currentQuestionIndex]();
    currentQuestionIndex = (currentQuestionIndex + 1) % questionList.length; 
+}
+
+const hintList = ["Sum = Addition, Times = multiply","x^2 = x*x", "15/100"];
+
+function hintPlayer(){
+  hintText.text = hintList[currentQuestionIndex - 1];
+  
+}
+function quitGame(){
+  currentQuestionIndex = 0;
+  quitText.text = "Thanks for playing!";
+  pointsText.text = (playerPoints)
+  confirmationText.text = '';
+  questionText.text = '';
+  hintText.text = '';
+  
+  
+}
+
+if (playerLives == 0){
+  quitgame()
+   
 }
