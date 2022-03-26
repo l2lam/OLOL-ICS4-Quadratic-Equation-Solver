@@ -2,13 +2,13 @@ const app = new PIXI.Application({ backgroundColor: 2e0025 });
 document.body.appendChild(app.view);
 // default text style
 const style = new PIXI.TextStyle({
-  align: "center",
+  align: "left",
   dropShadow: true,
   dropShadowBlur: 10,
   dropShadowDistance: 7,
     fill: [
     "red",
-    "#4f1144"
+    "#8800a3"
   ],
   fontFamily: "Times New Roman",
   fontSize: 42,
@@ -17,37 +17,31 @@ const style = new PIXI.TextStyle({
 });
 // style for rule text
 const style1 = new PIXI.TextStyle({
-  align: "center",
+  align: "left",
   dropShadow: true,
   dropShadowBlur: 10,
   dropShadowDistance: 7,
     fill: [
     "red",
-    "#4f1144"
+    "#d1ae00"
   ],
   fontFamily: "Times New Roman",
-  fontSize: 38,
+  fontSize: 34,
   wordWrap: true,
-  wordWrapWidth: 600,
+  wordWrapWidth: 650,
 });
 
 let correctAnswer = null;
 
-// text for rules
-const rulesText = new PIXI.Text('',style);
-rulesText.x = 275;
-rulesText.y = 50;
-app.stage.addChild(rulesText);
-
 //question text
 const questionText = new PIXI.Text('', style);
 questionText.x = 150;
-questionText.y = 50;
+questionText.y = 75;
 app.stage.addChild(questionText);
 // confirmation text
 const confirmationText = new PIXI.Text('', style);
 confirmationText.x = 285;
-confirmationText.y = 300;
+confirmationText.y = 350;
 app.stage.addChild(confirmationText);
 
 // text when player quits
@@ -57,21 +51,21 @@ quitText.y = 250;
 app.stage.addChild(quitText);
 
 // hint player text
-const hintText = new PIXI.Text('', style);
-hintText.x = 150;
-hintText.y = 275;
+const hintText = new PIXI.Text('', style1);
+hintText.x = 125;
+hintText.y = 350;
 app.stage.addChild(hintText);
 
 const pointsText = new PIXI.Text('', style)
 pointsText.x = 215;
 pointsText.y = 300;
 app.stage.addChild(pointsText);
+
 // to store player points
 var playerPoints = 0;
 
 
-// player lives
-var playerLives = null;
+
 
 // first question function
 // basic algebra question
@@ -80,16 +74,13 @@ function question1(){
   document.getElementById("demo").innerHTML = 'Question 1';
   hintText.text = '';
   pointsText.text = '';
-  playerLives = 3;
   playerPoints = 0;
-  // Assigns the variables "a" and "b" to random values
-  var a = Math.floor((Math.random() * 50) + 1);
-  var b = Math.floor((Math.random() * 1000) + 200);
   quitText.text = '';
-  // the first question 
-  questionText.text = (`Write an albebraic expression for the following verbal expression: The sum of ${b} and ${a} times a number(x).`);
+  var rndmNum1 = Math.floor((Math.random() * 50) + 1);
+  var rndmNum2 = Math.floor((Math.random() * 1000) + 200);
+  questionText.text = (`Write an albebraic expression for the following verbal expression: The sum of ${rndmNum2} and ${rndmNum1} times a number(x).`);
   //defines the correct answer for the question
-  correctAnswer = `${a}x+${b}`;
+  correctAnswer = `${rndmNum1}x+${rndmNum2}`;
 }
 
 //question 2 function
@@ -99,11 +90,11 @@ function question2(){
   confirmationText.text = '';
   quitText.text = '';
   hintText.text = '';
-  var a = Math.floor(Math.random() * (22 - 12 + 1)) + 12;
-  var b = 2;
-  var c = Math.pow(a, b)
-  questionText.text = `Which of the following values of x is a solution of the equation given: x^2 = ${c}`;
-  correctAnswer = `${a}`;
+  var rndmNum1 = Math.floor(Math.random() * (22 - 12 + 1)) + 12;
+  var power = 2;
+  var answr = Math.pow(rndmNum1, power)
+  questionText.text = `Which of the following values of x is a solution of the equation given: x^2 = ${answr}`;
+  correctAnswer = `${rndmNum1}`;
 }
 
 //question 3 function
@@ -113,14 +104,14 @@ function question3(){
   confirmationText.text = '';
   quitText.text = '';
   hintText.text = ''
-  var a =  Math.floor(Math.random() * (20 - 2 + 1)) + 2;
-  var b =  Math.floor(Math.random() * (20 - 2 + 1)) + 2;
-  var c =  Math.floor(Math.random() * (20 - 2 + 1)) + 2;
-  var d = `${a}(${b}+${c}x)`
-  questionText.text = `Find the answer using the distributive property; ${d}`;
-  var aB = (a*b);
-  var aC = (a*c);
-  correctAnswer = `${aB}+${aC}x`
+  var rndmNum1 =  Math.floor(Math.random() * (20 - 2 + 1)) + 2;
+  var rndmNum2 =  Math.floor(Math.random() * (20 - 2 + 1)) + 2;
+  var rndmNum3 =  Math.floor(Math.random() * (20 - 2 + 1)) + 2;
+  var expression = `${rndmNum1}(${rndmNum2}+${rndmNum3}x)`
+  questionText.text = `Find the answer using the distributive property; ${expression}`;
+  var rndmNum1times2 = (rndmNum1*rndmNum2);
+  var rndmNum1times3 = (rndmNum1*rndmNum3);
+  correctAnswer = `${rndmNum1times2}+${rndmNum1times3}x`
 }
 // question 4 function
 // like terms question
@@ -129,13 +120,13 @@ function question4(){
   confirmationText.text = '';
   quitText.text = '';
   hintText.text = ''
-  var a = Math.floor(Math.random() * (-20 - 20 + 1)) + 20;
-  var b = Math.floor(Math.random() * (10 - 2 + 1)) + 2;
-  var c = Math.floor(Math.random() * (7 - 2 + 1)) + 2;
-  var d = Math.floor(Math.random() * (-20 - 20 + 1)) + 20;
-  var e = Math.floor(Math.random() * (10 - 2 + 1)) + 2;
-  questionText.text = `Combine all like terms in the given expression: ${a}x + ${b}y + ${d}x - ${c}z + ${e}y` 
-  correctAnswer = `${a+d}x+${b+e}y-${c}z`;
+  var rndmNum1 = Math.floor(Math.random() * (-20 - 20 + 1)) + 20;
+  var rndmNum2 = Math.floor(Math.random() * (10 - 2 + 1)) + 2;
+  var rndmNum3 = Math.floor(Math.random() * (7 - 2 + 1)) + 2;
+  var rndmNum4 = Math.floor(Math.random() * (-20 - 20 + 1)) + 20;
+  var rndmNum5 = Math.floor(Math.random() * (10 - 2 + 1)) + 2;
+  questionText.text = `Combine all like terms in the given expression: ${rndmNum1}x + ${rndmNum2}y + ${rndmNum4}x - ${rndmNum3}z + ${rndmNum5}y` 
+  correctAnswer = `${rndmNum1+rndmNum4}x+${rndmNum2+rndmNum5}y-${rndmNum3}z`;
 }
 
 // question 5 function
@@ -149,7 +140,7 @@ function question5(){
   var y2 = Math.floor(Math.random() * (200 - 1 + 1)) + 1;
   var x1 = Math.floor(Math.random() * (200 - 1 + 1)) + 1;
   var x2 = Math.floor(Math.random() * (200 - 1 + 1)) + 1;
-  questionText.text = `What is the slope of a line that contain the points (${x1}, ${y1}) and (${x2}, ${y2}).`;
+  questionText.text = `What is the slope of a line(to 2 decimal places) that contain the points (${x1}, ${y1}) and (${x2}, ${y2}).`;
   var slopeEquation = ((y2-y1)/(x2-x1));
   slopeRounded = slopeEquation.toFixed(2);
   correctAnswer = `${slopeRounded}`;
@@ -176,11 +167,25 @@ function question6(){
   correctAnswer = ansRounded;
   
 }
-// question 7 function
-// introduces students to simple grade 10 algebra
-// introduction to FOIL method
+//questions 7-10 are grade 10 concepts
+
+//question 7 function
+// introduction to 0 exponents
 function question7(){
   document.getElementById('demo').innerHTML = "Question 7";
+  confirmationText.text = '';
+  quitText.text = '';
+  hintText.text = '';
+  var exp = 0;
+  var rndmNum = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
+  questionText.text = `Solve: ${rndmNum}^${exp}`;
+  var answr = `${rndmNum**exp}`;
+  correctAnswer = answr;
+}
+// question 8 function
+// introduction to FOIL method
+function question8(){
+  document.getElementById('demo').innerHTML = "Question 8";
   confirmationText.text = '';
   quitText.text = '';
   hintText.text = '';
@@ -195,44 +200,63 @@ function question7(){
   correctAnswer = finalAns;
 }
 
-// a function to check the answer for question 
-
+// question 9 function
+// introduction to the quadratic formula
+function question9(){
+  document.getElementById('demo').innerHTML = "Question 9";
+  confirmationText.text = '';
+  quitText.text = '';
+  hintText.text = '';
+  var a = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+  var b = Math.floor(Math.random() * (10 - 6 + 1)) + 6;
+  var c = Math.floor(Math.random() * (4 - 2 + 1)) + 2;
+  questionText.text = `Find the solutions(to 2 decimal places) of the equation ${a}x^2+${b}x+${c} using the quadratic formula. (Write as; #,# with the smallest number first.)`
+  const discriminant = (b**2-4*a*c);
+  const quadFormula1 = (-b+(discriminant)**0.5) / (2*a);
+  const quadFormula2 = (-b-(discriminant)**0.5) / (2*a);
+  var quad1Rounded = quadFormula1.toFixed(2);
+  var quad2Rounded = quadFormula2.toFixed(2);
+  correctAnswer = `${quad1Rounded},${quad2Rounded}`;
+}
 function checkAnswer(answer){
   hintText.text = '';
     if (answer == correctAnswer) {
-      (confirmationText.text = 'Correct!')
+      confirmationText.text = 'Correct!';
       playerPoints += 500;
     }
     else {
-      (confirmationText.text = 'Wrong :(')
-      playerLives --;
+      confirmationText.text = 'Wrong :(';
     }
 }
 
 // function to change question on button push
 var currentQuestionIndex = 0;
 // list of functions
-const questionList = [question1, question2, question3, question4, question5, question6, question7]; 
-
+const questionList = [question1, question2, question3, question4, question5, question6, question7, question8, question9]; 
+// calls next question
 function nextQuestion() {
    questionList[currentQuestionIndex]();
    currentQuestionIndex = (currentQuestionIndex + 1) % questionList.length; 
 }
-var hint1 = "Sum = Addition, Times = multiply"
-var hint2 = "x^2 = x*x"
-var hint3 = "Multiply both inside #'s by the outside #"
-var hint4 = "Combine the terms with the same letters"
-var hint5 = "y2-y1..."
-var hint6 = "Pythagorean Theorem"
-
-const hintList = [hint1, hint2, hint3, hint4, hint5, hint6];
-
+// hints
+const hint1 = "* Sum = Addition, Times = Multiply";
+const hint2 = "* x^2 = x*x";
+const hint3 = "* Multiply both inside #'s by the outside #";
+const hint4 = "* Combine the terms with the same letters";
+const hint5 = "* y2-y1...";
+const hint6 = "* Similar to Pythagorean Theorem";
+const hint7 = "* Any number to the power of 0 is 1";
+const hint8 = "* Use the FOIL method. Multiply the first terms of each binomial, the the outside terms, then the inside terms, then the last terms, and then combine like terms";
+const hint9 = "* The equation is in the form ax^2+bx+c. Knowing this, sub the a, b, and c values into the quadratic formula for your answer";
+// hint list
+const hintList = [hint1, hint2, hint3, hint4, hint5, hint6, hint7, hint8, hint9];
+// give player a hint at the cost of points
 function hintPlayer(){
   hintText.text = hintList[currentQuestionIndex - 1];
   confirmationText.text = '';
   playerPoints -= 300;
 }
-
+// quit game on button press
 function quitGame(){
   currentQuestionIndex = 0;
   quitText.text = "Thanks for playing!";
@@ -241,8 +265,5 @@ function quitGame(){
   questionText.text = '';
   hintText.text = '';
 }
-// trying to end the game when the player puts the wrong answer 3 times
-if (playerLives == 0){
-  quitGame()
-  
-}
+//a timer to quit the game after 3 minutes
+setTimeout(quitGame, 180000)
