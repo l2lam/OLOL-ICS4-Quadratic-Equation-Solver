@@ -1,8 +1,12 @@
 import random
 import time
+from numpy.random import seed
+from numpy.random import randint
+
 
 #Using Random to pick random numbers for everynumber
-random_num=[1, 2, 3, 4, 5, 6 , 7 , 8, 9, 10, 11 ,12 , 13, 14, 15, -1, -2, -3, -4, -5, -6 , -7 , -8, -9, -10]
+seed(1)
+values = randint(1, 10, 20)
 random_exp=[1, 2, 3]
 
 #Time stopwatch
@@ -11,7 +15,7 @@ value = ""
 
 #instructions
 print("This is VaIoRant")
-print("Out of 10 questions, how many can you get right?")
+print("10 questions, how many can you get right?")
 print("Can you beat your origional times")
 
 def mathfun():
@@ -24,8 +28,8 @@ def mathfun():
   while finished < 10: 
 
     #Choosing numbers to use and importing to equation
-    questionnum = random.choice(random_num)
-    questionnum2 = random.choice(random_num)
+    questionnum = random.choice(values)
+    questionnum2 = random.choice(values)
     questionexp = random.choice(random_exp)
     print()
     print("solve for x")
