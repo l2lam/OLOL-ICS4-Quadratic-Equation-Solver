@@ -266,5 +266,5 @@ function quitGame(){
   hintText.text = '';
 }
 //a timer to quit the game after 3 minutes
-const minutes = 180000;
+const gameTimeLimitMilliseconds = 3*60*1000;
 setTimeout(quitGame, minutes)
