@@ -20,17 +20,9 @@ function startGame()
     },1000)
   }
 
-
 //making randomizer with sin,cos, and tan to put in questions 
 const trigratios = ["sin","cos","tan"];
 const trigratio =  trigratios[Math.floor(Math.random()*trigratios.length)];
-
-//creating function to be able to change trig ratios in question 
-function nextQuestion()
-{
-question = document.getElementById("question");
-question.innerHTML = `What is the trig ratio of ${trigratio}?`;
-}
 
 //transparent background canvas
 const app = new PIXI.Application({ transparent: true });
@@ -50,11 +42,39 @@ graphics.endFill();
 
 app.stage.addChild(graphics);
 
-//labeling sides
+//creating function for randomizing value of the hypotenuse
+//hypotenuse value has to be greater than the other two sides of triangle
+function generateRandom(min = 9, max = 15) {
 
-s1 = 10
-s2 = 7
-s3 = 5
+  // find diff
+  let difference = max - min;
+
+  // generate random number 
+  let rand = Math.random();
+
+  // multiply with difference 
+  rand = Math.floor( rand * difference);
+
+  // add with min value 
+  rand = rand + min;
+
+  return rand;
+}
+ 
+
+
+//creating function to be able to change trig ratios in question 
+function nextQuestion()
+{
+question = document.getElementById("question");
+question.innerHTML = `What is the trig ratio of ${trigratio}?`;
+
+ 
+//labelling sides of triangle
+s1 = (generateRandom()); //hypotenuse has to be greater than two other side 
+s2 = Math.ceil(Math.random()*8);
+s3 = Math.ceil(Math.random()*8);
+
 const hyp = new PIXI.Text(s1);
 hyp.x = 130;
 hyp.y = 120;
@@ -75,4 +95,31 @@ theta.x = 36;
 theta.y = 72;
 app.stage.addChild(theta);
 
+btn1.innerHTML = `${s2}/${s1}`;
 
+btn2 = document.getElementById("btn2");
+btn2.innerHTML = `${s2}/${s3}`;
+
+btn3 = document.getElementById("btn3");
+btn3.innerHTML = `${s3}/${s1}`;
+
+}
+
+
+function checkAns(buttonIndex)
+{
+  let ans = document.getElementById("btn" + buttonIndex);
+  if (ans == btn1);
+    nextQuestion();
+   
+
+
+}
+
+
+
+
+
+
+
+  
