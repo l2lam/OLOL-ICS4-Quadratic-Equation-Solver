@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Big Trigs</h1>
+    <!--Start button and timer display-->
+    <button id = "startBtn" onclick="startGame()">START</button>
+    <br>
+    <br>
+    <div id="timeDisplay" hidden>Time Left: 60</div>
+    <br>
+
+    <!--question and multiple choice buttons--> 
+    <div id = "question" >What is the trig ratio?</div>
+    <br>
+    <button onclick = "checkAns(1)" id = "btn1"> 0 </button>
+    <button onclick = "checkAns(2)"id = "btn2"> 0 </button>
+    <button onclick = "checkAns(3)"id = "btn3"> 0 </button>
+    <br>
+
+    <script src="https://pixijs.download/release/pixi.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
